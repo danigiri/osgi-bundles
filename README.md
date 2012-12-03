@@ -1,4 +1,6 @@
-storm-osgi
+Storm OSGi
 ==========
 
-OSGification of the Storm project to run as OSGI bundles.
+OSGification of the <a href="https://github.com/nathanmarz/storm">Storm project</a> to run as OSGI bundles.
+
+Instructions soon to follow....
