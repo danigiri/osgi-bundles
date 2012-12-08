@@ -2,15 +2,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.hmsonline.storm</groupId>
-    <artifactId>storm-osgi-parent</artifactId>
+    <groupId>com.hmsonline.osgi</groupId>
+    <artifactId>bundles</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <groupId>com.googlecode.disruptor</groupId>
-  <artifactId>disruptor.osgi</artifactId>
+  <groupId>com.hmsonline.bundle</groupId>
+  <artifactId>disruptor</artifactId>
   <version>2.10.1</version>
   <packaging>bundle</packaging>
-  <name>${artifactId}</name>
+  <name>Disruptor Bundle</name>
   <description>This dependency was improperly configured as an OSGI bundle, so it's going to need to pulled into this bundle
     to get rid of the errant manifest.mf entries
   </description>
@@ -48,7 +48,7 @@
   </build>
   <dependencies>
     <dependency>
-      <groupId>${project.groupId}</groupId>
+      <groupId>com.googlecode.disruptor</groupId>
       <artifactId>disruptor</artifactId>
       <version>${project.version}</version>
       <scope>provided</scope>

@@ -2,16 +2,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.hmsonline.storm</groupId>
-    <artifactId>storm-osgi-parent</artifactId>
+    <groupId>com.hmsonline.osgi</groupId>
+    <artifactId>bundles</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <groupId>storm</groupId>
-  <artifactId>storm-lib.osgi</artifactId>
+  <groupId>com.hmsonline.bundle</groupId>
+  <artifactId>storm</artifactId>
   <version>0.8.1</version>
   <packaging>bundle</packaging>
-  <name>${artifactId}</name>
-  <description>${artifactId}</description>
+  <name>Storm Bundle</name>
+  <description>Storm OSGI Bundle</description>
   <properties>
     <symbolic.name>${project.groupId}.${project.artifactId}</symbolic.name>
     <embed-dep>*;scope=provided;type=!pom;inline=true</embed-dep>
@@ -48,32 +48,27 @@
   </build>
   <dependencies>
     <dependency>
-      <groupId>org.clojure</groupId>
-      <artifactId>clojure.osgi</artifactId>
-      <version>${clojure.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>clojure.osgi</groupId>
+      <groupId>com.hmsonline.bundle</groupId>
       <artifactId>clojure.osgi</artifactId>
       <version>${clojure.osgi.version}</version>
     </dependency>
     <dependency>
-      <groupId>storm</groupId>
-      <artifactId>carbonite.osgi</artifactId>
+      <groupId>com.hmsonline.bundle</groupId>
+      <artifactId>carbonite</artifactId>
       <version>1.5.0</version>
     </dependency>
     <dependency>
-      <groupId>com.googlecode.disruptor</groupId>
-      <artifactId>disruptor.osgi</artifactId>
+      <groupId>com.hmsonline.bundle</groupId>
+      <artifactId>disruptor</artifactId>
       <version>2.10.1</version>
     </dependency>
     <dependency>
-      <groupId>com.netflix.curator</groupId>
-      <artifactId>curator-framework.osgi</artifactId>
+      <groupId>com.hmsonline.bundle</groupId>
+      <artifactId>curator-framework</artifactId>
       <version>1.0.1</version>
     </dependency>
     <dependency>
-      <groupId>${project.groupId}</groupId>
+      <groupId>storm</groupId>
       <artifactId>storm-lib</artifactId>
       <version>${project.version}</version>
       <scope>provided</scope>
@@ -93,18 +88,18 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>storm</groupId>
-      <artifactId>libthrift7.osgi</artifactId>
+      <groupId>com.hmsonline.bundle</groupId>
+      <artifactId>libthrift7</artifactId>
       <version>0.7.0</version>
     </dependency>
     <dependency>
-      <groupId>storm</groupId>
-      <artifactId>jgrapht.osgi</artifactId>
+      <groupId>com.hmsonline.bundle</groupId>
+      <artifactId>jgrapht</artifactId>
       <version>0.8.3</version>
     </dependency>
     <dependency>
-      <groupId>com.googlecode.json-simple</groupId>
-      <artifactId>json-simple.osgi</artifactId>
+      <groupId>com.hmsonline.bundle</groupId>
+      <artifactId>json-simple</artifactId>
       <version>1.1</version>
     </dependency>
     <dependency>
@@ -183,8 +178,8 @@
       <version>2.0</version>
     </dependency>
     <dependency>
+      <groupId>com.hmsonline.bundle</groupId>
       <artifactId>jzmq.osgi</artifactId>
-      <groupId>backtype</groupId>
       <version>2.1.0</version>
     </dependency>
   </dependencies>

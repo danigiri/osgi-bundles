@@ -2,16 +2,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.hmsonline.storm</groupId>
-    <artifactId>storm-osgi-parent</artifactId>
+    <groupId>com.hmsonline.osgi</groupId>
+    <artifactId>bundles</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <groupId>org.clojure</groupId>
-  <artifactId>clojure.osgi</artifactId>
+  <groupId>com.hmsonline.bundle</groupId>
+  <artifactId>clojure</artifactId>
   <version>1.4.0</version>
   <packaging>jar</packaging>
-  <name>Clojure Core OSGI</name>
-  <description>Clojure Core OSGI</description>
+  <name>Clojure Bundle</name>
+  <description>Clojure OSGI Bundle</description>
   <build>
     <resources>
       <resource>
@@ -35,7 +35,7 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>${project.groupId}</groupId>
+                  <groupId>org.clojure</groupId>
                   <artifactId>clojure</artifactId>
                 </artifactItem>
               </artifactItems>
@@ -59,7 +59,7 @@
   </build>
   <dependencies>
     <dependency>
-      <groupId>${project.groupId}</groupId>
+      <groupId>org.clojure</groupId>
       <artifactId>clojure</artifactId>
       <version>${clojure.version}</version>
       <scope>provided</scope>

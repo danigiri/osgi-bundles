@@ -2,12 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.hmsonline.storm</groupId>
-    <artifactId>storm-osgi-parent</artifactId>
+    <groupId>com.hmsonline.osgi</groupId>
+    <artifactId>bundles</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <groupId>storm</groupId>
-  <artifactId>carbonite.osgi</artifactId>
+  <groupId>com.hmsonline.bundle</groupId>
+  <artifactId>carbonite</artifactId>
   <version>1.5.0</version>
   <packaging>jar</packaging>
   <name>${project.artifactId}</name>
@@ -38,7 +38,7 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>${project.groupId}</groupId>
+                  <groupId>storm</groupId>
                   <artifactId>carbonite</artifactId>
                 </artifactItem>
               </artifactItems>
@@ -62,19 +62,19 @@
   </build>
   <dependencies>
     <dependency>
-      <groupId>${project.groupId}</groupId>
+      <groupId>storm</groupId>
       <artifactId>carbonite</artifactId>
       <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>clojure.osgi</groupId>
-      <artifactId>clojure.osgi</artifactId>
+      <groupId>com.hmsonline.bundle</groupId>
+      <artifactId>clojure</artifactId>
       <version>${clojure.osgi.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.esotericsoftware.kryo</groupId>
-      <artifactId>kryo.osgi</artifactId>
+      <groupId>com.hmsonline.bundle</groupId>
+      <artifactId>kryo</artifactId>
       <version>2.17</version>
     </dependency>
   </dependencies>

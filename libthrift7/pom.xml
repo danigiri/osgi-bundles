@@ -2,15 +2,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.hmsonline.storm</groupId>
-    <artifactId>storm-osgi-parent</artifactId>
+    <groupId>com.hmsonline.osgi</groupId>
+    <artifactId>bundles</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <groupId>storm</groupId>
-  <artifactId>libthrift7.osgi</artifactId>
+  <groupId>com.hmsonline.bundle</groupId>
+  <artifactId>libthrift7</artifactId>
   <version>0.7.0</version>
   <packaging>bundle</packaging>
-    <name>${project.artifactId}</name>
+  <name>${project.artifactId}</name>
   <description>${project.artifactId}</description>
   <properties>
     <symbolic.name>${project.groupId}.${project.artifactId}</symbolic.name>
@@ -42,7 +42,7 @@
   </build>
   <dependencies>
     <dependency>
-      <groupId>${project.groupId}</groupId>
+      <groupId>storm</groupId>
       <artifactId>libthrift7</artifactId>
       <version>${project.version}</version>
       <scope>provided</scope>
