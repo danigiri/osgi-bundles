@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.hmsonline.osgi</groupId>
-    <artifactId>bundles</artifactId>
+    <artifactId>storm-osgi</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <groupId>com.hmsonline.bundle</groupId>
+  <groupId>com.hmsonline.storm</groupId>
   <artifactId>storm</artifactId>
   <version>0.8.1</version>
   <packaging>bundle</packaging>
@@ -29,10 +29,10 @@
             <Embed-Dependency>${embed-dep}</Embed-Dependency>
             <Clojure-Require>backtype.storm.LocalCluster</Clojure-Require>
             <Export-Package>
+              clojure.tools,
               storm.*,
               backtype.storm,
               backtype.storm.*,
-              clojure.tools
             </Export-Package>
             <Import-Package>
               clojure.osgi,
@@ -91,6 +91,12 @@
       <groupId>com.hmsonline.bundle</groupId>
       <artifactId>libthrift7</artifactId>
       <version>0.7.0</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>com.hmsonline.bundle</groupId>
@@ -116,6 +122,12 @@
       <groupId>org.mortbay.jetty</groupId>
       <artifactId>jetty</artifactId>
       <version>6.1.26</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>servlet-api</artifactId>
+          <groupId>org.mortbay.jetty</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.mortbay.jetty</groupId>
@@ -123,29 +135,28 @@
       <version>6.1.26</version>
     </dependency>
     <dependency>
-      <groupId>org.mortbay.jetty</groupId>
-      <artifactId>servlet-api</artifactId>
-      <version>2.5-20081211</version>
-    </dependency>
-    <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-core</artifactId>
       <version>${logback.version}</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
       <version>${logback.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${slf4j.version}</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>log4j-over-slf4j</artifactId>
       <version>${slf4j.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>jcl-over-slf4j</artifactId>
-      <version>${slf4j.version}</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>commons-lang</groupId>
@@ -179,8 +190,8 @@
     </dependency>
     <dependency>
       <groupId>com.hmsonline.bundle</groupId>
-      <artifactId>jzmq.osgi</artifactId>
-      <version>2.1.0</version>
+      <artifactId>jeromq</artifactId>
+      <version>0.2.0</version>
     </dependency>
   </dependencies>
 </project>

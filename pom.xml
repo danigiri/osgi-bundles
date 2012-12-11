@@ -2,21 +2,27 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.hmsonline.osgi</groupId>
-  <artifactId>bundles</artifactId>
+  <artifactId>storm-osgi</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>OSGified 3rd Party Libs</name>
+  <name>OSGi Storm Libraries</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <osgi.core.version>4.3.0</osgi.core.version>
-    <osgi.compendium.version>4.3.0</osgi.compendium.version>
     <storm.version>0.9.0-SNAPSHOT</storm.version>
+    <karaf.version>2.3.0</karaf.version>
     <clojure.version>1.4.0</clojure.version>
     <clojure.osgi.version>1.4.0</clojure.osgi.version>
-    <karaf.version>2.3.0</karaf.version>
     <slf4j.version>1.6.2</slf4j.version>
     <logback.version>0.9.30</logback.version>
   </properties>
+  <distributionManagement>
+    <repository>
+      <id>clojars</id>
+      <name>Clojars repository</name>
+      <url>https://clojars.org/repo</url>
+    </repository>
+  </distributionManagement>
   <repositories>
     <repository>
       <id>clojars.org</id>
@@ -34,6 +40,7 @@
     <module>json-simple</module>
     <module>jgrapht</module>
     <module>jzmq</module>
+    <module>jeromq</module>
     <module>libthrift7</module>
     <module>minlog</module>
     <module>reflectasm</module>
@@ -42,6 +49,10 @@
     <module>curator-client</module>
     <module>curator-framework</module>
     <module>disruptor</module>
+    <module>storm</module>
+    <!-- I know referencing a module like this isn't the best practice, but to make things easier for building an osgi version of latest.-->
+    <module>../storm</module>
+    <module>storm-features</module>
   </modules>
   <build>
     <pluginManagement>
