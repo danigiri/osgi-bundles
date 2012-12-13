@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.hmsonline.osgi</groupId>
-  <artifactId>storm-osgi</artifactId>
+  <artifactId>bundles</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>OSGi Storm Libraries</name>
+  <name>OSGified Bundles</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <osgi.core.version>4.3.0</osgi.core.version>
@@ -50,7 +50,6 @@
     <module>curator-client</module>
     <module>curator-framework</module>
     <module>disruptor</module>
-    <module>storm</module>
     <!-- I know referencing a module like this isn't the best practice, but to make things easier for building an osgi version of latest.-->
     <module>../storm</module>
     <module>storm-features</module>
