@@ -52,7 +52,6 @@
     <module>disruptor</module>
     <!-- I know referencing a module like this isn't the best practice, but to make things easier for building an osgi version of latest.-->
     <module>../storm</module>
-    <module>storm-features</module>
   </modules>
   <build>
     <pluginManagement>
